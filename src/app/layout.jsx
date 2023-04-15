@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
+import Navbar from '@/components/Navbar';
 
 export const metadata = {
   title: 'IMDb',
@@ -24,7 +25,8 @@ const RootLayout = ({ children })=> {
             <ThemeProvider enableSystem={true} attribute='class'>
               <div className='dark:bg-gray-700 dark:text-gray-200 text-gray-700 transition-colors duration-300 min-h-screen select-none'>
                 <Header />
-                <div className='container mx-auto max-w-6xl'>
+                <Navbar />
+                <div className='container sm:mx-auto max-w-6xl px-3'>
                 {children} 
                 </div>
               </div>
