@@ -24,7 +24,9 @@ const RootLayout = ({ children })=> {
             <ThemeProvider enableSystem={true} attribute='class'>
               <div className='dark:bg-gray-700 dark:text-gray-200 text-gray-700 transition-colors duration-300 min-h-screen select-none'>
                 <Header />
+                <div className='container mx-auto max-w-6xl'>
                 {children} 
+                </div>
               </div>
             </ThemeProvider>
         </body>
