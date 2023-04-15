@@ -1,19 +1,17 @@
-import Header from '@/components/Header';
+"use client";
 import './globals.css';
+import Header from '@/components/Header';
 import Head from 'next/head';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata = {
   title: 'IMDb',
   description: 'Fazendo avaliações em filmes'
 }
 
-
-
-export default function RootLayout({ children }) {
-  return (
-    <>
+const RootLayout = ({ children })=> {
+  return ( <>
       <html lang="pt-BR">
-
         <Head>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -23,10 +21,16 @@ export default function RootLayout({ children }) {
         </Head>
 
         <body>
-          <Header />
-          {children}
+            <ThemeProvider enableSystem={true} attribute='class'>
+              <div className='dark:bg-gray-700 dark:text-gray-200 text-gray-700 transition-colors duration-300 min-h-screen select-none'>
+                <Header />
+                {children} 
+              </div>
+            </ThemeProvider>
         </body>
       </html>
     </>
   )
 }
+
+export default RootLayout;
