@@ -5,9 +5,13 @@ const Movie = async(req) => {
 
 const movieId = req.params.id;
 
-const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`);
+const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}&language=pt-BR`);
 
 const movie = await res.json();
+
+const data = new Date(movie.release_date || movie.first_air_date);
+
+const lancamento = data.toLocaleDateString();
 
   return (
     <div className="mt-5">
@@ -23,12 +27,11 @@ const movie = await res.json();
         <div className="pt-2 mt-5">
             <h2 className="font-bold text-lg mb-3 text-center">{movie.title || movie.name}</h2>
             <p className="text-lg">
-                <span className="font-semibold mr-1">Overview: </span>
                 {movie.overview}
             </p>
             <p className="text-lg mt-5">
-                <span className="font-semibold mr-1">Date Release: </span>
-                {movie.release_date || movie.first_air_date}
+                <span className="font-semibold mr-1">Lançamento: </span>
+                {lancamento}                
             </p>
             <p className="text-lg mt-5 flex items-center">
                 <span className="font-semibold mr-3"><FiThumbsUp /></span>

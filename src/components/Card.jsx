@@ -3,6 +3,13 @@ import Image from "next/image";
 import {FiThumbsUp} from 'react-icons/fi'
 
 const Card = ({result}) => {
+
+  const handleDate = (date)=>{
+    const res = new Date(date);
+
+    return res.toLocaleDateString();
+}
+
   return (
     <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md 
     rounded-lg sm:border-slate-400 sm:m-2 transition-shadow duration-200
@@ -27,7 +34,7 @@ const Card = ({result}) => {
         <h2 className="font-bold truncate font-lg py-2">{result.title || result.name}</h2>
 
         <div className="flex justify-between">
-            <p>{result.release_date || result.firs_air_date}</p>
+            <p>{handleDate(result.release_date || result.firs_air_date)}</p>
             <p className="flex items-center"><FiThumbsUp className="mr-1" /> {result.vote_count}</p>
         </div>
       </Link>

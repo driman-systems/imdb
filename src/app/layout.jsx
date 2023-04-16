@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
+import SearchBox from '@/components/SearchBox.jsx';
 
 export const metadata = {
   title: 'IMDb',
@@ -27,6 +28,7 @@ const RootLayout = ({ children })=> {
                 <Header />
                 <Navbar />
                 <div className='container sm:mx-auto max-w-6xl px-3'>
+                  <SearchBox />
                 {children} 
                 </div>
               </div>
