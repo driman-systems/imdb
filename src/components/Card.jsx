@@ -11,9 +11,9 @@ const Card = ({result}) => {
 }
 
   return (
-    <div className="cursor-pointer sm:p-3 sm:hover:shadow-slate-400 sm:shadow-md 
-    rounded-lg sm:border-slate-400 sm:m-2 transition-shadow duration-200
-    group
+    <div className="cursor-pointer p-2 md:p-0 sm:hover:shadow-slate-400 shadow-md 
+    rounded-lg border-slate-400 sm:m-2 transition-shadow duration-200
+    group justify-center mt-10  md:mt-1 first-of-type:mt-1
     ">
       <Link href={`movie/${result.id}`}>
 
@@ -27,13 +27,13 @@ const Card = ({result}) => {
             maxHeight: "300px"
         }} />
 
-        <div className="p-2 border-b-2 border-b-slate-600">
+        <div className="px-4 py-3">
             <p className="line-clamp-2 text-md">{result.overview}</p>
         </div>
 
-        <h2 className="font-bold truncate font-lg py-2">{result.title || result.name}</h2>
+        <h2 className="font-bold truncate font-lg py-3 px-4">{result.title || result.name}</h2>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between px-4 py-2">
             <p>{handleDate(result.release_date || result.firs_air_date)}</p>
             <p className="flex items-center"><FiThumbsUp className="mr-1" /> {result.vote_count}</p>
         </div>

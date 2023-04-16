@@ -10,7 +10,6 @@ export default function Header() {
     <div className="flex justify-between container mx-auto max-w-6xl items-center py-6">
         <div className="flex">
             <MenuItem title="Home" address="/" Icon={BiHomeSmile} />
-            <MenuItem title="About" address="/about" Icon={BsFillInfoSquareFill} />
         </div>
         <div className="flex items-center space-x-5">
             <DarkModeSwitch />
