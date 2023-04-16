@@ -2,9 +2,20 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    extend: {},
+    extend: {
+      lineClamp: {
+        1: '1',
+        2: '2',
+        3: '3',
+      }
+    },
+    variants: {
+      lineClamp: ['responsive', 'hover']
+    }
   },
-  plugins: [],
-  darkMode: 'class'
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
+  darkMode: 'class',
 }
 
