@@ -6,11 +6,6 @@ import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
 import SearchBox from '@/components/SearchBox.jsx';
 
-export const metadata = {
-  title: 'IMDb',
-  description: 'Fazendo avaliações em filmes'
-}
-
 const RootLayout = ({ children })=> {
   return ( <>
       <html lang="pt-BR">
