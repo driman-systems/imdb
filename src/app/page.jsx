@@ -1,5 +1,7 @@
 import Results from "@/components/Results";
 
+export const dynamic = "force-dynamic";
+
 const api_key = process.env.API_KEY;
 
 const Home = async({searchParams})=> {

@@ -1,13 +1,15 @@
 {
-    "cSpell.words": [
-        "avaliações",
-        "Erro",
-        "Fazendo",
-        "fazer",
-        "filmes",
-        "lancamento",
-        "Lançamento",
-        "requisição",
-        "tailwindcss"
-    ]
+  "cSpell.words": [
+    "avaliações",
+    "Erro",
+    "Fazendo",
+    "fazer",
+    "filmes",
+    "lancamento",
+    "Lançamento",
+    "requisição",
+    "tailwindcss"
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

@@ -1,6 +1,5 @@
 import MenuItem from "./MenuItem";
 import {BiHomeSmile} from 'react-icons/bi';
-import {BsFillInfoSquareFill} from 'react-icons/bs';
 import Link from "next/link";
 import DarkModeSwitch from "./DarkModeSwitch";
 
